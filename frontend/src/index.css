@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-cream: #F7F5EA;
+    --primary-olive: #7B8450;
+    --secondary-sage: #A8B58A;
+    --light-accent: #DDE4C7;
+    --card-ivory: #FFFDF6;
+    --text-forest: #30372A;
+    --text-muted: #777A69;
+    --border-soft: #E5E5D5;
+    --success-green: #4D7C50;
+  }
+
+  body {
+    background-color: #F7F5EA;
+    color: #30372A;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+    border: none;
+  }
+}
+
+/* Custom Glass & Card Utilities */
+.glass-panel {
+  background: rgba(255, 253, 246, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(229, 229, 213, 0.7);
+}
+
+.olive-gradient-subtle {
+  background: linear-gradient(135deg, #F7F5EA 0%, #EFF3E6 50%, #E5ECD8 100%);
+}
+
+.olive-hero-gradient {
+  background: linear-gradient(135deg, #7B8450 0%, #8A965E 50%, #687042 100%);
+}
+
+.card-elevation {
+  background: #FFFDF6;
+  border: 1px solid #E5E5D5;
+  box-shadow: 0 4px 20px -2px rgba(48, 55, 42, 0.05), 0 2px 6px -1px rgba(48, 55, 42, 0.03);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-elevation:hover {
+  box-shadow: 0 10px 28px -4px rgba(123, 132, 80, 0.12), 0 4px 10px -2px rgba(48, 55, 42, 0.04);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F5EA;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4CCA8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7B8450;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.92; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s infinite ease-in-out;
+}

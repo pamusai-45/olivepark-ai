@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+ENV/
+.env
+
+# Node / Frontend
+frontend/node_modules/
+frontend/.pnpm-store/
+frontend/dist/
+frontend/.env.local
+frontend/.env.*.local
+node_modules/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Temporary outputs
+backend/static/receipts/*.pdf
+backend/static/qr/*.png
+backend/olivepark.db
